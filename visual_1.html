@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title></title>
+    <style>
+    input[id="menuicon"] {display:none;}
+    input[id="menuicon"] + label {display:block;margin:30px;width:30px;height:20px;position: fixed;top: 0px; left:0;cursor:pointer;}
+    input[id="menuicon"] + label span {display:block;position:absolute;width:100%;height:4px;border-radius:30px;background:#000;transition:all .35s;}
+    input[id="menuicon"] + label span:nth-child(1) {top:0;}
+    input[id="menuicon"] + label span:nth-child(2) {top:50%;transform:translateY(-50%);} /* 비슷하게 사용할 수 있는 style top:calc(50% - 2.5px); margin-top:-2.5px;*/
+    input[id="menuicon"] + label span:nth-child(3) {bottom:0;}
+    input[id="menuicon"]:checked + label {z-index:2;position: fixed; top: 30px; top: 0; left:0; z-index:10;}
+    input[id="menuicon"]:checked + label span {background:#fff;}
+    input[id="menuicon"]:checked + label span:nth-child(1) {top:50%;transform:translateY(-50%) rotate(45deg);}
+    input[id="menuicon"]:checked + label span:nth-child(2) {opacity:0;}
+    input[id="menuicon"]:checked + label span:nth-child(3) {bottom:50%;transform:translateY(50%) rotate(-45deg);}
+    div[class="sidebar"] {width:255px;height:100%;font-size:14px;background:#222;position:fixed;top:0;left:-300px;z-index:1;transition:all .35s;}
+    input[id="menuicon"]:checked + label + div {left:0;}
+    ul {
+      list-style-type: none;
+      margin-top:100px;
+      padding: 0;
+    }
+    li a {
+      text-size:13px;
+      margin: 0 0 0 25px;
+      display: block;
+      padding: 8px;
+      text-decoration: none;
+      font-weight: bold;
+      color:white;
+    }
+    #bon {
+      margin:0px;
+      padding:0px;
+      z-index:-10;
+      position: relative;
+    }
+    body {
+      margin:0px;
+      padding:0px;
+    }
+    a#MOVE_TOP_BTN {
+    position: fixed;
+    right: 2%;
+    bottom: 50px;
+    display: none;
+    z-index: 999;
+  }
+    </style>
+  </head>
+  <body>
+    <input type="checkbox" id="menuicon">
+    <label for="menuicon">
+      <span></span>
+      <span></span>
+      <span></span>
+    </label>
+    <div class="sidebar">
+      <ul>
+        <li id="yoon"><a href="visual_1.html"><font color="#ffffff" onmouseover="this.style.color='#587dbf'" onmouseout="this.style.color='#ffffff'">윤고딕 서체꼴 이야기</font></a></li>
+        <li id="yoon"><a href="visual_2.html"><font color="#ffffff" onmouseover="this.style.color='#587dbf'" onmouseout="this.style.color='#ffffff'">윤고딕 자간행간</font></a></li>
+        <li id="yoon"><a href="visual_3.html"><font color="#ffffff" onmouseover="this.style.color='#587dbf'" onmouseout="this.style.color='#ffffff'">윤고딕 크기와 무게</font></a></li>
+        <li id="go"><a href="visual_4.html"><font color="#ffffff" onmouseover="this.style.color='#54a76a'" onmouseout="this.style.color='#ffffff'">프랭클린 고딕 서체꼴 이야기</font></a></li>
+        <li id="go"><a href="visual_5.html"><font color="#ffffff" onmouseover="this.style.color='#54a76a'" onmouseout="this.style.color='#ffffff'">프랭클린 고딕 자간행간</font></a></li>
+        <li id="go"><a href="visual_6.html"><font color="#ffffff" onmouseover="this.style.color='#54a76a'" onmouseout="this.style.color='#ffffff'">프랭클린 고딕 크기와 무게</font></a></li>
+      </ul>
+    </div>
+    <div id="bon">
+      <img src="과제6_21861054_민지희_한1꼴.jpg" width="100%">
+    </div>
+
+    <a style="display:scroll;position:fixed;bottom:10px;right:10px;opacity:50%" href="#" title=”맨위로"><img src="top_1.png"><onmouseover="this.src='top_han.png'" onmouseout="this.src='top_1.png'"></a>
+
+  </body>
+</html>
